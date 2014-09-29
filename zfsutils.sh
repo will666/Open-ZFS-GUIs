@@ -39,7 +39,7 @@ if [ $action == "1" ]; then
 	-O normalization=formD \
 	-m /Volumes/$poolname \
 	$poolname $disk
-	sudo chown -R will:staff /Volumes/$poolname
+	sudo chown -R :staff /Volumes/$poolname
 fi
 if [ $action == "2" ]; then
 	echo ":::::::::::::::::::::::::::::::::::"
@@ -57,7 +57,7 @@ if [ $action == "2" ]; then
 	fi
 	sudo zfs create $pool/$dataset && \
 	sudo zfs set quota=$quota $pool/$dataset
-	sudo chown -R will:staff /Volumes/$pool/$dataset
+	sudo chown -R :staff /Volumes/$pool/$dataset
 fi
 if [ $action == "3" ]; then
 	echo ":::::::::::::::::::::::::::::::::::"
